@@ -1,10 +1,11 @@
 <div style="display: flex" cdkDropListGroup>
   <div style="width: 150px;">
     <p>Source</p>
-    <mat-list cdkDropList [cdkDropListData]="sItems" cdkDropListSortingDisabled
+    <mat-list class="source-list" cdkDropList [cdkDropListData]="sItems" cdkDropListSortingDisabled
       [cdkDropListEnterPredicate]="noReturnPredicate" (cdkDropListExited)="onSourceListExited($event)"
       (cdkDropListEntered)="onSourceListEntered($event)">
-      <mat-list-item *ngFor="let item of sItems" cdkDrag [cdkDragData]="item">{{ item.name }}</mat-list-item>
+      <mat-list-item class="source-list-item" *ngFor="let item of sItems" cdkDrag [cdkDragData]="item">{{ item.name }}
+      </mat-list-item>
     </mat-list>
   </div>
   <div class="items">
